@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+dist/
+.env
+*.log
+uploads/
+*.db
+npm-debug.log
+yarn-error.log

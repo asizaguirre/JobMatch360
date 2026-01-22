@@ -1,0 +1,31 @@
+{
+    "name": "jobmatch360",
+    "version": "1.0.0",
+    "main": "backend/server.js",
+    "type": "module",
+    "scripts": {
+        "server": "nodemon --exec node backend/server.js",
+        "client": "cd frontend && npm run dev",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "prisma:generate": "npx prisma generate",
+        "prisma:migrate": "npx prisma migrate dev --name init",
+        "prisma:studio": "npx prisma studio"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.0.0",
+        "@prisma/extension-optimize": "^1.0.0",
+        "@prisma/instrumentation": "^6.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.18.2",
+        "express-rate-limit": "^6.7.0",
+        "helmet": "^7.0.0",
+        "multer": "^1.4.5-lts.1",
+        "pdf-parse": "^1.1.1"
+    },
+    "devDependencies": {
+        "concurrently": "^8.0.0",
+        "nodemon": "^3.0.1",
+        "prisma": "^6.0.0"
+    }
+}
